@@ -5,9 +5,15 @@ public class SolitaireDecrypt {
     protected String deck;
 
 
+
+    // Where all the magic happens. Will decrypt the given input.
     public String execute(String input)
     {
-       return "Not implemented";
+        //Capitalize all and remove spaces
+        String capInput = input.replaceAll("\\s+","");
+        capInput.toUpperCase();
+
+       return capInput;
     }
 
 
@@ -16,9 +22,14 @@ public class SolitaireDecrypt {
 
 
 
+    //Basic Constructor.
     public SolitaireDecrypt()
     {
 
     }
 
+    //Constructor with string parameter.
+    public SolitaireDecrypt(String deck) {
+        this.deck = deck;
+    }
 }

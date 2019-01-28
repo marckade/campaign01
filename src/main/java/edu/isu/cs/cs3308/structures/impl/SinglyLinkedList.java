@@ -376,6 +376,29 @@ public class SinglyLinkedList<E> implements List<E> {
      */
     @Override
     public int indexOf(E item) {
-        return 0;
+
+        if(item == null || size() < 1)
+        {
+            return -1;
+        }
+        else
+        {
+            for(int i = 0; i <= size(); i++)
+            {
+                E tempItem;
+                //
+                if(this.get(i) == item)
+                {
+                    tempItem = item;
+
+                    String tempString = tempItem.toString();
+                    return tempString.indexOf(0);
+
+                }
+            }
+        }
+
+
+        return -1;
     }
 }
